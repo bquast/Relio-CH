@@ -4141,7 +4141,9 @@
                                         e(), c();
                                     });
                                     _.push(path, void 0, (e) => {
-                                        e && y(e);
+                                        if (e && e.name !== 'NavigationDuplicated') {
+                                            y(e);
+                                        }
                                     });
                                 });
                         })
